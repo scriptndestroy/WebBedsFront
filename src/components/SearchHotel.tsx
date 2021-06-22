@@ -12,26 +12,28 @@ interface SearchHotelProps {
 }
 
 const SearchHotel = (props: SearchHotelProps) => {
-  const { handleSubmit, control, register, setValue } = useForm();
+  const { handleSubmit, control, register, reset } = useForm();
 
   const { onSearch, onChangeP, search, submitDisabled } = props;
 
-  const onSubmit = (data: any): void => {    
+  const onSubmit = (data: any): void => {
     onSearch(data);
   };
 
   const handleReset = (): void => {
+    reset({
+      destinationId: "",
+      nights: "",
+    });
     onChangeP({
       destinationId: "",
       nights: "",
     });
-    setValue("destinationID", "");
-    setValue("nights", "");
   };
 
   /**
    * Validacion de caracter introducido en inputs
-   * 
+   *
    */
   const checkNumber = (value: string): boolean => {
     return /^-?[\d.]+(?:e-?\d+)?$/.test(value);
@@ -44,9 +46,9 @@ const SearchHotel = (props: SearchHotelProps) => {
   return (
     <Grid container>
       <FormValidator onSubmit={handleSubmit(onSubmit)} onReset={handleReset}>
-        <Grid container style={{justifyContent: 'center'}}>
+        <Grid container style={{ justifyContent: "center" }}>
           <Grid item xs={12} md={3}>
-            <Controller            
+            <Controller
               name="destinationId"
               control={control}
               defaultValue={""}
@@ -56,8 +58,8 @@ const SearchHotel = (props: SearchHotelProps) => {
               }) => (
                 <TextField
                   {...register("destinationID")}
-                  style={{width: '95%'}}                  
-                  autoComplete='number'
+                  style={{ width: "95%" }}
+                  autoComplete="number"
                   error={!!error}
                   helperText={error ? error.message : null}
                   placeholder="0"
@@ -86,7 +88,7 @@ const SearchHotel = (props: SearchHotelProps) => {
               defaultValue={""}
               render={({ field: { onChange }, fieldState: { error } }) => (
                 <TextField
-                style={{width: '95%'}}               
+                  style={{ width: "95%" }}
                   error={!!error}
                   helperText={error ? error.message : null}
                   placeholder="0"
@@ -106,13 +108,18 @@ const SearchHotel = (props: SearchHotelProps) => {
               )}
               rules={{ required: "Number of nights required" }}
             />
-          </Grid>        
-          <Grid item xs={6} md={1} alignContent='flex-start'>
-            <Button type="submit" variant="contained" color="primary" disabled={submitDisabled}>
+          </Grid>
+          <Grid item xs={6} md={1} alignContent="flex-start">
+            <Button
+              type="submit"
+              variant="contained"
+              color="primary"
+              disabled={submitDisabled}
+            >
               Search
             </Button>
           </Grid>
-          <Grid item xs={6} md={1} alignContent='flex-end'>
+          <Grid item xs={6} md={1} alignContent="flex-end">
             <Button type="reset" variant="contained" color="secondary">
               RESET
             </Button>
