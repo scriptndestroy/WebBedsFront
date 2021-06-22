@@ -2,7 +2,7 @@
   "name": "web-beds-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://scriptndestroy.github.io/web-beds-app-front",
+  "homepage": "http://scriptndestroy.github.io/WebBedsFront",
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
