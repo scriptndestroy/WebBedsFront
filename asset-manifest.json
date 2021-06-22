@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/WebBedsFront/static/css/main.82b27c4e.chunk.css",
+    "main.js": "/WebBedsFront/static/js/main.f210dcac.chunk.js",
+    "main.js.map": "/WebBedsFront/static/js/main.f210dcac.chunk.js.map",
+    "runtime-main.js": "/WebBedsFront/static/js/runtime-main.d176e21c.js",
+    "runtime-main.js.map": "/WebBedsFront/static/js/runtime-main.d176e21c.js.map",
+    "static/js/2.8994058b.chunk.js": "/WebBedsFront/static/js/2.8994058b.chunk.js",
+    "static/js/2.8994058b.chunk.js.map": "/WebBedsFront/static/js/2.8994058b.chunk.js.map",
+    "index.html": "/WebBedsFront/index.html",
+    "static/css/main.82b27c4e.chunk.css.map": "/WebBedsFront/static/css/main.82b27c4e.chunk.css.map",
+    "static/js/2.8994058b.chunk.js.LICENSE.txt": "/WebBedsFront/static/js/2.8994058b.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/WebBedsFront/static/media/Roboto-Regular.a8d6ac03.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d176e21c.js",
+    "static/js/2.8994058b.chunk.js",
+    "static/css/main.82b27c4e.chunk.css",
+    "static/js/main.f210dcac.chunk.js"
+  ]
+}
